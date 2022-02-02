@@ -21,3 +21,4 @@ Features: The platform will do the following:
   Interact with friends 
   User can like, comment, and share the status/timeline post of their friends
 
+Want to make a pull request *test*

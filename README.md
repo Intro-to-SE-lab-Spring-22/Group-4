@@ -5,7 +5,7 @@ Names (Usernames):
   Cameron Verser (clevelandbrown)
 
 Techniques & Languages: 
-  JavaScript
+  JavaScript or Python  /TBD
   HTML
   CSS
   SQL

@@ -5,10 +5,10 @@ Names (Usernames):
   Cameron Verser (clevelandbrown)
 
 Techniques & Languages: 
-  JavaScript or Python  /TBD
-  HTML
-  CSS
-  SQL
+  * JavaScript or Python  /TBD
+  * HTML
+  * CSS
+  * SQL
 
 Description: The platform will act like a facsimile Facebook, allowing users to connect with their friends and post things for their friends to both see and interact with.
 

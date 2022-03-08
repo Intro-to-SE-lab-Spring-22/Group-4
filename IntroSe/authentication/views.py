@@ -16,7 +16,7 @@ def signup(request):
         username = request.POST.get('username')
         firstname = request.POST.get('firstname')
         lastname = request.POST.get('lastname')
-        email = request.POST.get('email')
+        email = None
         pass1 = request.POST.get('pass1')
         pass2 = request.POST.get('pass2')
 
@@ -51,7 +51,7 @@ def signin(request):
             return render(request, "authentication/index.html", {'fname': fname})
 
         else:
-        #   messages.error(request, "Bad Credentials")
+            messages.error(request, "Incorrect Username or Password")
             return redirect("home")
 
 

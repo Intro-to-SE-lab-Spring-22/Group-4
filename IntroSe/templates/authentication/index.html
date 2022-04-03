@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+    background-color:black;
+    background-image:url("https://static.dezeen.com/uploads/2015/04/Seven-doors_Nendo_Abe-Kogyo_dezeen_784_10.jpg");
+    background-size:cover;
+    text-align:center;
+}
+h3{
+    text-align:center;
+    font-size:40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+button{
+    background-color: gray;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+}
+
+button:hover{
+    background-color: black;
+    color: white
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The DOOR</title>
+</head>
+<body>
+    
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Message: </strong> {{ message }}
+    </div>
+    {% endfor %}
+    
+    <h3>Welcome to The DOOR</h3>
+
+
+
+    {% if user.is_authenticated %}
+    <h3>Hello {{fname}}!</h3>
+    <h4>You have been successfully logged in.</h4>
+    <button type="submit"> <a href="/signout">Sign Out</a></button>
+    <button type="submit"> <a href="/delete">Delete Account</a></button>
+
+    {% else %}
+    
+    <button type="submit"> <a href="/signup">Sign Up</a></button>
+    <button type="submit"> <a href="/signin">Sign In</a></button>
+     
+    {% endif %}
+    
+
+    <script src="" async defer></script>
+</body>
+</html>

@@ -8,4 +8,4 @@ At the end of Sprint 1, we had the very basics of an idea of what we wanted to a
 By Sprint 2, we had a fully functional website. The Create Account, Login, and Logout functionalities were all working as intended, and some CSS had been applied to make it look better. For Sprint 3, we hope to have the post feature completed.
 Below is a small recording of where the project is at the end of Sprint 2.
 
-!(https://github.com/Intro-to-SE-lab-Spring-22/Group-4/blob/main/resources/TheDOORsusiso.gif)
+![Sprint 2 Gif](https://github.com/Intro-to-SE-lab-Spring-22/Group-4/blob/main/resources/TheDOORsusiso.gif)

@@ -106,3 +106,16 @@ def signout(request):
     logout(request)
     messages.success(request, "Logged out successfully")
     return redirect('home')
+
+def del_auth(request):
+    # Returns user to confirmation page to make sure they didn't missclick
+    return render(request, "authentication/confirm.html")
+
+
+def del_user(request):
+
+    # Deletes user from Django database
+    u = request.user
+    u.delete()
+    messages.success(request, "You have successfully deleted your account!")
+    return redirect("home")

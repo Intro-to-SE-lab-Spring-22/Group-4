@@ -1,4 +1,3 @@
-
 from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from django.contrib.auth.models import User
@@ -10,6 +9,15 @@ from django.contrib.auth import authenticate, login, logout
 def home(request):
     return render(request, "authentication/index.html")
 
+# Checks if a string has any of the special characters
+def is_special_character(password):
+    special_char = "!@#$%^&*-_./"
+    if any(password in special_char for password in special_char):
+        return True
+    return False
+
+
+# Signup page
 def signup(request):
 
     if request.method == "POST":
@@ -31,6 +39,16 @@ def signup(request):
         # Makes sure that all characters in username are only alphanumeric
         if not username.isalnum():
             messages.error(request, "Make sure your username only contains numbers and letters.")
+            return redirect("home")
+        
+        # Makes sure the password falls under specified character conditions
+        if (not is_special_character(pass1)) or len(pass1) <= 8:
+            messages.error(request, "Your password must include at least one of the following: \"! @ # $ % ^ & * - _ . /\" You must also include at least 8 characters.")
+            return redirect("home")
+
+        # Makes sure the user's name only has alphabetical letters
+        if (not firstname.isalpha()) or (not lastname.isalpha()):
+            messages.error(request, "Your first and last name must only include the letters a-z.")
             return redirect("home")
     
 
@@ -86,5 +104,24 @@ def signout(request):
 
     # Logs out lol
     logout(request)
-    messages.success(request, "Logged out successfully!")
+    messages.success(request, "Logged out successfully")
     return redirect('home')
+
+def del_auth(request):
+    # Returns user to confirmation page to make sure they didn't missclick
+    return render(request, "authentication/confirm.html")
+
+
+def del_user(request):
+
+    # Deletes user from Django database
+    u = request.user
+    u.delete()
+    messages.success(request, "You have successfully deleted your account!")
+    return redirect("home")
+
+def post(request):
+    return render(request, "authentication/post.html")
+
+def save_post(request):
+    return render(request, "authentication/index.html")

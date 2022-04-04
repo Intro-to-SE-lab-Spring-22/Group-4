@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <style>
+    <style>
      body{
          background-color:black;
          background-image:url("https://static.dezeen.com/uploads/2015/04/Seven-doors_Nendo_Abe-Kogyo_dezeen_784_10.jpg");
+         background-size:cover;
          text-align:center;
      }
      h3{
@@ -12,8 +13,27 @@
          font-size:40px;
          font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
      }
-     </style>
-     
+     button{
+        background-color: gray;
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+    }
+    
+    button:hover{
+        background-color: black;
+        color: white
+    }
+
+    button2{
+        background-color:blue;
+    }
+    </style>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,8 +53,11 @@
 
     {% if user.is_authenticated %}
     <h3>Hello {{fname}}!</h3>
-    <h4>You have been successfully logged in.</h4>
+    <h5>Timeline</h5>
+    
+    <button type="submit" class="button button2"><a href="/post">Post</a></button>
     <button type="submit"> <a href="/signout">Sign Out</a></button>
+    <button type="submit"> <a href="/del_auth">Delete Account</a></button>
 
     {% else %}
     

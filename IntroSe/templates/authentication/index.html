@@ -28,6 +28,10 @@
         background-color: black;
         color: white
     }
+
+    button2{
+        background-color:blue;
+    }
     </style>
     
     <meta charset="UTF-8">
@@ -49,7 +53,9 @@
 
     {% if user.is_authenticated %}
     <h3>Hello {{fname}}!</h3>
-    <h4>You have been successfully logged in.</h4>
+    <h5>Timeline</h5>
+    
+    <button type="submit" class="button button2"><a href="/post">Post</a></button>
     <button type="submit"> <a href="/signout">Sign Out</a></button>
     <button type="submit"> <a href="/del_auth">Delete Account</a></button>
 

@@ -119,3 +119,9 @@ def del_user(request):
     u.delete()
     messages.success(request, "You have successfully deleted your account!")
     return redirect("home")
+
+def post(request):
+    return render(request, "authentication/post.html")
+
+def save_post(request):
+    return render(request, "authentication/index.html")

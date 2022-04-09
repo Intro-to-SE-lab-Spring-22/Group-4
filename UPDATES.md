@@ -13,4 +13,6 @@ Below is a small recording of where the project is at the end of Sprint 2.
 
 # Sprint 3
 
-By Sprint 3, we had every feature that needed to be put in, implemented. Create account, login, logout, making posts, and making friends are all working as intended. By the next sprint we hope to have things even more polished and sophisticated, and upload all of our data to GitHub before losing it.
+By Sprint 3, we had every feature that needed to be put in, implemented. Create account, login, logout, making posts, and making friends are all working as intended. By the next sprint we hope to have things even more polished and sophisticated, and upload all of our data to GitHub before losing it. Below is our final progress before the submission of Sprint 3
+
+![Sprint 3 Gif](https://github.com/Intro-to-SE-lab-Spring-22/Group-4/blob/main/resources/thedoor3.gif)
